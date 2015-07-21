@@ -1,0 +1,20 @@
+{
+    "name": "gridprinciples/laravel-users",
+    "description": "Adds parties (humans, businesses, etc) and multiple contact points (emails, phones) to Laravel users",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Greg Brock",
+            "email": "greg@gridprinciples.com"
+        }
+    ],
+    "require": {
+        "laravel/laravel": "^5.1",
+        "doctrine/dbal": "^2.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "GridPrinciples\\Users\\": "src/"
+        }
+    }
+}
