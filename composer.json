@@ -20,6 +20,9 @@
         }
     ],
     "autoload": {
+        "classmap": [
+            "src/Http/controllers"
+        ],
         "psr-4": {
             "GridPrinciples\\Users\\": "src/"
         }

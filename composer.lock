@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c6f1ebff4e890848fe71a94275c91c98",
+    "hash": "58b8c2996346d1f3842da22225dbf02d",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -624,10 +624,10 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/gridprinciples/blade-forms.git",
-                "reference": "cf0c298d3d4e602d6090f0466e63b5354bda3c14"
+                "reference": "efef6631086e73d6084cadb6c776a8afb2762abd"
             },
             "require": {
-                "laravel/laravel": "^5.1",
+                "laravel/framework": "^5.1",
                 "laravelcollective/html": "~5.0"
             },
             "type": "library",
@@ -646,7 +646,7 @@
                 }
             ],
             "description": "A set of Laravel Blade files which generate HTML forms",
-            "time": "2015-07-21 18:08:40"
+            "time": "2015-07-22 17:53:48"
         },
         {
             "name": "jakub-onderka/php-console-color",
@@ -920,50 +920,6 @@
                 "laravel"
             ],
             "time": "2015-07-21 18:33:13"
-        },
-        {
-            "name": "laravel/laravel",
-            "version": "v5.1.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/laravel/laravel.git",
-                "reference": "901a45fd96a7479e77f63ea5f8d1147a2766cafa"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/laravel/laravel/zipball/901a45fd96a7479e77f63ea5f8d1147a2766cafa",
-                "reference": "901a45fd96a7479e77f63ea5f8d1147a2766cafa",
-                "shasum": ""
-            },
-            "require": {
-                "laravel/framework": "5.1.*",
-                "php": ">=5.5.9"
-            },
-            "require-dev": {
-                "fzaninotto/faker": "~1.4",
-                "mockery/mockery": "0.9.*",
-                "phpspec/phpspec": "~2.1",
-                "phpunit/phpunit": "~4.0"
-            },
-            "type": "project",
-            "autoload": {
-                "classmap": [
-                    "database"
-                ],
-                "psr-4": {
-                    "App\\": "app/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "The Laravel Framework.",
-            "keywords": [
-                "framework",
-                "laravel"
-            ],
-            "time": "2015-07-01 18:30:05"
         },
         {
             "name": "laravelcollective/html",
