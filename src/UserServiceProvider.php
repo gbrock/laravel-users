@@ -2,6 +2,7 @@
 
 namespace GridPrinciples\Users;
 
+use GridPrinciples\BladeForms\BladeFormsServiceProvider;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\ServiceProvider;
 
@@ -13,6 +14,9 @@ class UserServiceProvider extends ServiceProvider {
             // Return an instance of Illuminate\Contracts\Auth\UserProvider...
             return new AuthUserProvider(new BcryptHasher(), '\App\User');
         });
+
+        // Load Blade forms
+        $this->app->register(BladeFormsServiceProvider::class);
     }
 
     public function boot()

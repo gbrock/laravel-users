@@ -10,8 +10,15 @@
     ],
     "require": {
         "laravel/framework": "^5.1",
-        "doctrine/dbal": "^2.5"
+        "doctrine/dbal": "^2.5",
+        "gridprinciples/blade-forms": "dev-master"
     },
+    "repositories": [
+        {
+            "url": "https://github.com/gridprinciples/blade-forms.git",
+            "type": "git"
+        }
+    ],
     "autoload": {
         "psr-4": {
             "GridPrinciples\\Users\\": "src/"
