@@ -8,12 +8,23 @@ class RouteServiceProvider extends \Illuminate\Foundation\Support\Providers\Rout
 
     protected $namespace = 'GridPrinciples\Users\Http\Controllers';
 
+    /**
+     * Define your route model bindings, pattern filters, etc.
+     *
+     * @param  \Illuminate\Routing\Router  $router
+     * @return void
+     */
+    public function boot(Router $router)
+    {
+        //
+
+        parent::boot($router);
+    }
+
     public function map(Router $router)
     {
-        if (! $this->app->routesAreCached()) {
-            $router->group(['namespace' => $this->namespace], function($router) {
-                    require __DIR__.'/../resources/routes.php';
-            });
-        }
+        $router->group(['namespace' => $this->namespace], function ($router) {
+            require __DIR__.'/../resources/routes.php';
+        });
     }
 }
