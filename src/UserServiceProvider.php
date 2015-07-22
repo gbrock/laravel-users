@@ -17,7 +17,6 @@ class UserServiceProvider extends ServiceProvider {
 
         // Extend the Auth facade with our own provider
         Auth::extend('gridprinciples', function($app) {
-            // Return an instance of Illuminate\Contracts\Auth\UserProvider...
             return new AuthUserProvider(new BcryptHasher(), '\App\User');
         });
 
@@ -32,6 +31,12 @@ class UserServiceProvider extends ServiceProvider {
             __DIR__.'/../config/users.php' => config_path('users.php'),
         ]);
 
+        // Apply routing
+        if (! $this->app->routesAreCached()) {
+            require __DIR__.'/../resources/routes.php';
+        }
+
+        // Publish migrations
         $this->publishes([
             __DIR__.'/../database/migrations/' => database_path('migrations')
         ], 'migrations');
