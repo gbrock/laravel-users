@@ -10,6 +10,12 @@ class UserServiceProvider extends ServiceProvider {
 
     public function register()
     {
+        // Merge our configuration with user's configuration
+        $this->mergeConfigFrom(
+            __DIR__.'/../config/users.php', 'users'
+        );
+
+        // Extend the Auth facade with our own provider
         Auth::extend('gridprinciples', function($app) {
             // Return an instance of Illuminate\Contracts\Auth\UserProvider...
             return new AuthUserProvider(new BcryptHasher(), '\App\User');
@@ -21,6 +27,11 @@ class UserServiceProvider extends ServiceProvider {
 
     public function boot()
     {
+        // Publish the config file
+        $this->publishes([
+            __DIR__.'/../config/users.php' => config_path('users.php'),
+        ]);
+
         $this->publishes([
             __DIR__.'/../database/migrations/' => database_path('migrations')
         ], 'migrations');
