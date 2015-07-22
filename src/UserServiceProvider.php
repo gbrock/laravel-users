@@ -22,6 +22,9 @@ class UserServiceProvider extends ServiceProvider {
 
         // Load Blade forms
         $this->app->register(BladeFormsServiceProvider::class);
+
+        // Load Route provider
+        $this->app->register(RouteServiceProvider::class);
     }
 
     public function boot()
@@ -30,11 +33,6 @@ class UserServiceProvider extends ServiceProvider {
         $this->publishes([
             __DIR__.'/../config/users.php' => config_path('users.php'),
         ]);
-
-        // Apply routing
-        if (! $this->app->routesAreCached()) {
-            require __DIR__.'/../resources/routes.php';
-        }
 
         // Publish migrations
         $this->publishes([
